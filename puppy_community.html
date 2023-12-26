@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="dog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100&display=swap"
+        rel="stylesheet">
+    <script src="dog.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+        </script>
+</head>
+
+<body>
+
+
+
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            text-align: center;
+        }
+
+        #wrap-center {
+            width: 1280px;
+            display: inline-block;
+            /* background-color: yellow; */
+        }
+
+        /* #nav ul{
+            
+        } */
+
+        #nav ul li {
+            list-style-type: none;
+            line-height: 72px;
+            display: inline-block;
+            position: relative;
+        }
+
+        #nav a {
+            text-decoration: none;
+            color: var(--baseForeground);
+            display: block;
+            /* background-color: blanchedalmond;/ */
+            font-weight: 700;
+            font-family: 'Noto Sans KR', sans-serif;
+            padding: 0 28px;
+
+        }
+
+        #main {
+            height: 2000px;
+        }
+
+        #nav {
+            /* background-color: aquamarine; */
+            display: flex;
+            justify-content: center;
+        }
+
+        #top-logo {
+            margin-top: 2px;
+            margin-left: 30px;
+            display: block;
+            position: absolute;
+            left: 64px;
+            top: 9px;
+        }
+
+        #big {
+            padding-top: 10px;
+            height: 500px;
+            padding-bottom: 30px;
+            
+            
+
+        }
+
+        #big h2 {
+            line-height: 50px;
+            margin: 0px;
+        }
+
+        #big-message {}
+
+        #upload-NoticeImage {
+            height: 500px;
+            box-shadow: 2px 5px 40px 0 rgba(0, 0, 0, .08);
+            border-radius: 14px;
+            position: relative;
+            /* display: flex; */
+            justify-content: center;
+            
+        }
+
+        #upload-NoticeImage>span {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            /* 밑줄의 굵기를 조절 */
+            position: absolute;
+            display: block;
+            /* left: 0; */
+            /* top: 0; */
+            
+
+
+        }
+
+        #image-space {
+            height: 450px;
+            display: flex;
+            margin-top: 20px;
+            width: 3627px;
+            
+        }
+
+        #image-space img {
+            border: 2px solid red;
+            /* 테두리의 두께와 색상을 지정합니다. */
+            border-radius: 10px;
+            /* 테두리의 모서리를 둥글게 만듭니다. */
+            box-shadow: 0 0 10px red;
+            /* 그림자 효과를 추가합니다. */
+
+        }
+
+        #image-space div {
+            position: relative;
+            
+
+        }
+
+        .image-main {
+            padding: 0 40px;
+            
+        }
+
+        #main {
+            display: inline-flex;
+            padding-top: 96px;
+            padding: 96px 0 0;
+            margin: 0 -18px;
+            max-width: 1332px;
+        }
+
+        #main-left {
+            width: 630px;
+            height: 1000px;
+            padding: 0 18px;
+            box-shadow: 2px 5px 40px 0 rgba(0, 0, 0, .08);
+            border-radius: 14px;
+            margin-right: 15px;
+
+        }
+
+        #main-right {
+            width: 630px;
+            height: 1000px;
+            padding: 0 18px;
+            box-shadow: 2px 5px 40px 0 rgba(0, 0, 0, .08);
+            border-radius: 14px;
+            margin-left: 15px;
+
+        }
+
+        #picture {
+            width: 100px;
+            height: 100px;
+            display: block;
+        }
+
+        #place {
+            display: block;
+        }
+
+        /* .picture-main{
+            position: absolute;
+        } */
+
+        #red {
+            color: red;
+        }
+
+        .para {
+            font-size: 1.0em;
+            color: #666666;
+            line-height: 1.8em;
+            display: inline-block;
+            text-align: left;
+            margin: 0;
+        }
+
+        #redlogo {
+            position: relative;
+            top: 22px;
+        }
+
+        .space1 {
+            display: flex;
+            background-color: rgb(245, 239, 239);
+            border-radius: 14px;
+            transition: transform 1.0s;
+            margin-right: 120px;
+            margin-left: 60px;
+            
+            
+            
+            
+        }
+
+        .space2{
+            background-color: rgb(187, 187, 187);
+            border-radius: 14px;
+            transition: transform 1.0s;
+            width: 1209px;
+            margin-left: 60px;
+            
+        }
+
+
+        .space3{  
+            background-color: rgb(187, 187, 187);
+            border-radius: 14px;
+            transition: transform 1.0s;
+            width: 1209px;
+        }
+        
+        .button1, .button2, .button3{
+            margin: 4px 20px;
+            padding: 3px 20px;
+            border-radius: 4px;
+            
+        }
+
+        .arrow-prev{ 
+            position: absolute;
+            
+            width:100px;
+            height:100px;
+            margin-right:5px;
+            top: 200px;
+        }
+        .arrow-next {
+            float:right;
+            
+            width:100px;
+            height:100px;
+            margin-right:5px;
+            right: -20px;
+            top: 200px;
+        }
+
+        .arrow-prev::after {
+            position: absolute;
+            left: 35px; 
+            top: 20px;
+            content: '';
+            width: 25px; /* 사이즈 */
+            height: 25px; /* 사이즈 */
+            border-top: 5px solid #000; /* 선 두께 */
+            border-right: 5px solid #000; /* 선 두께 */
+            transform: rotate(225deg); /* 각도 */
+        }
+
+        .arrow-next::after {
+            position: absolute;
+            left: 10px; 
+            top: 20px; 
+            content: '';
+            width: 25px; /* 사이즈 */
+            height: 25px; /* 사이즈 */
+            border-top: 5px solid #000; /* 선 두께 */
+            border-right: 5px solid #000; /* 선 두께 */
+            transform: rotate(45deg); /* 각도 */
+        }
+
+        .image-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 150px;
+            grid-gap: 1rem;
+            padding: 2rem;
+            grid-template-areas: 
+                'a a a'
+                'b c c'
+                'b d g'
+                'e f f'
+                'e f f';
+
+        }
+        .image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+        .image1{
+            grid-area: a;
+        }
+        .image2{
+            grid-area: b;
+        }
+        .image3{
+            grid-area: c;
+        }
+        .image4{
+            grid-area: d;
+        }
+        .image5{
+            grid-area: e;
+        }
+        .image6{
+            grid-area: f;
+        }
+        .image7{
+            grid-area: g;
+        }
+
+        #main-left-galleryvar{
+            display: flex;
+            justify-content: center;
+        }
+        #gallery-icon > img{
+            display: block;
+            margin-top: 15px;
+            margin-right: 10px;
+        }
+        .right-container{
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            height: 90%;
+            width: 90%;
+            grid-gap: 1rem;
+            padding: 20px;
+            
+            
+        }
+        .right-container >div{
+            box-shadow: 2px 5px 40px 0 rgba(0, 0, 0, .08);
+            border-radius: 14px;
+            height: 400px;
+            width: 268px;
+            
+
+        }
+        .right-container img{
+            border-radius: 14px;
+        }
+        .right-space1 hr{
+            border-top: 1px solid #333;
+            border-style: solid;
+            border-radius: 4px;
+            margin: 0 20px;
+            margin-bottom: 10px;
+            
+        }
+        .right-space1 p{
+          
+            
+        }
+    </style>
+    <div id="wrap">
+        <div id="wrap-center">
+            <div id="nav">
+                <div id="top-logo">
+                    <img src="bissung.png" height="80px" alt="">
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">갤러리</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="big">
+                <h2 id="big-message"><img src="redlogo.png" height="70px" id="redlogo">우리 강아지를 찾아주세요</h2>
+                <div id="upload-NoticeImage" style="overflow: hidden;" ><span></span>  
+                    <div id="image-space" >
+                        <div class="space1">
+                            <div class="image-main"><img src="image1.jpg" height="300px" alt="">
+                                <h3><span id="red">(실종)</span>충청남도</h3>
+                                <p class="para">공주시 충남 공주시 계..<br>진돗개 수컷 2023-11-21<br>귀 끝이 갈수록 노랗고 .. </p>
+                            </div>
+                            <div class="image-main"><img src="image5.jpg" height="300px">
+                                <h3><span id="red">(실종)</span>울산광역시</h3>
+                                <p class="para">남구 삼산동 외식명가 ..<br>포메라니언 수컷 2023-10-30<br>털 색은 갈색이고 활발.. </p>
+                            </div>
+                            <div class="image-main"><img src="image7.jpg" height="300px">
+                                <h3><span id="red">(실종)</span>경상북도</h3>
+                                <p class="para">포항시 북구 경상북도 ..<br>믹스견 수컷 2023-10-31<br>눈색깔이 밝은 갈색이며..</p>
+                            </div>
+                        </div>
+                        <div class="space2">
+                            <p>2번째 이미지</p>
+                        </div>
+                        <div class="space3">
+                            <p>3번째 이미지</p>
+                        </div>
+                    </div>
+                    <button class="button1"></button>
+                    <button class="button2"></button>
+                    <button class="button3"></button>
+                    <span class="arrow-prev"></span>
+                    <span class="arrow-next"></span>
+                </div>
+            </div>
+            <div id="main">
+                <div id="main-left">
+                    <div id ="main-left-galleryvar"><span id="gallery-icon"><img src="gallery_icon.png"  height="50px"></span><h2>gallery</h2></div>
+                    <div class="image-container">
+                        <img src="image_1.jpg" alt="img" class="image image1">  
+                        <img src="image_2.jpg" alt="img" class="image image2">  
+                        <img src="image_3.jpg" alt="img" class="image image3">  
+                        <img src="image_4.jpg" alt="img" class="image image4">  
+                        <img src="image_5.jpg" alt="img" class="image image5">  
+                        <img src="image_6.jpg" alt="img" class="image image6">  
+                        <img src="image_7.jpg" alt="img" class="image image7">  
+                    </div>
+                </div>
+                <div id="main-right">
+                    <div><span><h2>등록정보</h2></span></div>
+                    <div class="right-container">
+                        <div class="right-container-space right-space1">
+                                <div><p style="font-size: 20px;" >참깨빵</p><hr>
+                                <img src="KakaoTalk_20231123_160837469.jpg" height="80%" width="80%" alt="">
+                            </div>
+                        </div>
+                        <div class="right-container-space right-space2"></div>
+                        <div class="right-container-space right-space3"></div>
+                        <div class="right-container-space right-space4"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function button(){
+            document.querySelector('.button1').addEventListener('click', function(){
+            document.querySelector('#image-space').style.transform = 'translate(0vw)';
+            });
+
+            document.querySelector('.button2').addEventListener('click', function(){
+            document.querySelector('#image-space').style.transform = 'translate(-1209px)';
+            });
+
+            document.querySelector('.button3').addEventListener('click', function(){
+            document.querySelector('#image-space').style.transform = 'translate(-2418px)';
+            });
+
+        };
+        button()
+    </script>
+</body>
+
+</html>
